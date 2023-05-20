@@ -30,8 +30,15 @@ https://docs.qameta.io/allure/#_get_started
 * Allure report
 
 ### How to run
-* ```npm install```
-* ```npm start```
+```
+git clone https://github.com/jccolina/qa-challenge.git
+```
+```
+npm install
+```
+```
+npm start
+```
 
 ### Folder structure
 * test > features: to store .feature files with tests written in gherkin.
