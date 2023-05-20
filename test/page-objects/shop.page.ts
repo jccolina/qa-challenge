@@ -17,10 +17,6 @@ class ShopPage extends BasePage {
     }
 
     public async clickProductItem(productName: string) {
-        const productLink = await this.getProductLink(productName);
-        const x = Math.trunc(await productLink.getLocation('x')); 
-        const y = Math.trunc(await productLink.getLocation('y')); 
-        await browser.scroll(x, y);
         await this.getProductLink(productName).click();
     }
 }
