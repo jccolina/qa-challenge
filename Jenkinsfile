@@ -7,5 +7,12 @@ pipeline {
       }
     }
 
+    stage('logs') {
+      steps {
+        sh '''ls -al
+echo "hello jenkins"'''
+      }
+    }
+
   }
 }
