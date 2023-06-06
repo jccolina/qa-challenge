@@ -8,9 +8,20 @@ pipeline {
     }
 
     stage('logs') {
-      steps {
-        sh '''ls -al
+      parallel {
+        stage('logs') {
+          steps {
+            sh '''ls -al
 echo "hello jenkins"'''
+          }
+        }
+
+        stage('install') {
+          steps {
+            sh 'npm install'
+          }
+        }
+
       }
     }
 
